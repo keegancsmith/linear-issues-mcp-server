@@ -1,5 +1,7 @@
 # Linear Issues MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@keegancsmith/linear-issues-mcp-server)](https://smithery.ai/server/@keegancsmith/linear-issues-mcp-server)
+
 This is a simple MCP (Model Context Protocol) server that provides read-only access to Linear issues. It allows language models to fetch Linear issues and their associated data using a Linear API token.
 
 ## Features
@@ -13,6 +15,14 @@ The server provides two tools:
 
 - Node.js
 - A Linear API token or OAuth access token
+
+### Installing via Smithery
+
+To install Linear Issues Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@keegancsmith/linear-issues-mcp-server):
+
+```bash
+npx -y @smithery/cli install @keegancsmith/linear-issues-mcp-server --client claude
+```
 
 ## Installation
 
