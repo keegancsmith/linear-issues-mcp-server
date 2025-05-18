@@ -1,0 +1,20 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['linear-issues-mcp-server.js'], env: { LINEAR_API_TOKEN: config.linearApiToken } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - linearApiToken
+    properties:
+      linearApiToken:
+        type: string
+        default: ""
+        description: Linear API token (API key or OAuth token)
+  exampleConfig:
+    linearApiToken: lin_api_1234567890abcdef
